@@ -5,7 +5,7 @@ let shopItemsData = [
     id: "sdfewfd",
     name: "Casual Shirt",
     price: 45,
-    decs: "loremvsdgg gweg gwg rgerg gerg htj herh jerhe hhergeh hetjt",
+    desc: "loremvsdgg gweg gwg rgerg gerg htj herh jerhe hhergeh hetjt",
     img: "images/img-1.jpg",
   },
 
@@ -13,7 +13,7 @@ let shopItemsData = [
     id: "ghgfewfd",
     name: "Office Shirt",
     price: 100,
-    decs: "loremvsdgg gweg gwg rgerg gerg htj herh jerhe hhergeh hetjt",
+    desc: "gsdlg kgf loremvsdgg gweg gwg rgerg gerg htj herh jerhe hhergeh hetjt",
     img: "images/img-2.jpg",
   },
 
@@ -21,7 +21,7 @@ let shopItemsData = [
     id: "erefewfd",
     name: "T Shirt",
     price: 50,
-    decs: "loremvsdgg gweg gwg rgerg gerg htj herh jerhe hhergeh hetjt",
+    desc: "peo loremvsdgg gweg gwg rgerg gerg htj herh jerhe hhergeh hetjt",
     img: "images/img-3.jpg",
   },
 
@@ -29,7 +29,7 @@ let shopItemsData = [
     id: "qbfbfewfd",
     name: "Mens Suit",
     price: 300,
-    decs: "loremvsdgg gweg gwg rgerg gerg htj herh jerhe hhergeh hetjt",
+    desc: "dfdg oremvsdgg gweg gwg rgerg gerg htj herh jerhe hhergeh hetjt",
     img: "images/img-4.jpg",
   },
 ];
@@ -37,18 +37,18 @@ let shopItemsData = [
 let generateShop = () => {
   return (shop.innerHTML = shopItemsData
     .map((x) => {
+      let { id, name, price, desc, img } = x;
       return `
-        <div class="item">
-                <img width="220"src="images/img-1.jpg" alt="">
+        <div id = product-id-${id}class="item">
+                <img width="220"src= ${img} alt="">
                 <div class="details">
-                    <h3>Casual Shirt</h3>
-                    <p>leorem sdgmnfgl fdfd fefefef fdfegrg hthgh hhrghhrt ghrhtrhgrthrthrt 
-                    </p>
+                    <h3>${name}</h3>
+                    <p>${desc}</p>
                     <div class="price-quantity">
-                        <h2>$ 45</h2>
+                        <h2>$ ${price}</h2>
                         <div class="buttons">
                             <i class="bi bi-dash-lg"></i>
-                            <div class="quantity">0</div>
+                            <div id = ${id} class="quantity">0</div>
                             <i class="bi bi-plus-lg"></i>
                         </div>
                     </div>
