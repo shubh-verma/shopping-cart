@@ -1,0 +1,8 @@
+version: '3.3'
+
+services:
+  react:
+    image: ghcr.io/shubh-verma/reac-app:latest
+    build: .
+    ports:
+      - 3000:3000
